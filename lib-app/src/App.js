@@ -6,8 +6,10 @@ import {
 } from "react-router-dom";
 
 import './App.scss';
-// import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Authors from "./components/Authors/Authors";
+import Books from "./components/Books/Books";
+import Add from "./components/Add/Add";
 
 const App = () => {
   return (
@@ -15,13 +17,13 @@ const App = () => {
 			<div className="center">
         <div className="wrap">
           <Sidebar />
-          {/*<Header page="Authors"/>
           <Switch>
-            <Route exact path="/" component={MainInfo} />
-            <Route path="/authors" component={MainInfo} />
+            <Route exact path="/" component={Authors} />
+            <Route path="/authors" component={Authors} />
             <Route path="/books" component={Books} />
-            <Route path="/modal" component={Modal} />
-          </Switch> */}
+            <Route path="/add" component={Add} />
+            {/* <Route path="/edit" component={Edit} /> */}
+          </Switch>
         </div>
 			</div>
 		</Router>
