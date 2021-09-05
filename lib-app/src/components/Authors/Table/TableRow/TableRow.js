@@ -1,6 +1,6 @@
 import React from "react";
 
-// import Actions from "./Actions";
+import Actions from "./Actions/Actions";
 import { fetchData } from "../../../../server/api";
 import { useState, useEffect } from 'react';
 
@@ -34,7 +34,7 @@ const TableRow = ({search}) => {
 						<td>{date_of_birth}</td>
 						<td>{date_of_death}</td>
 						<td>
-							{/* <Actions id={id} setPers={setPers} persons={persons}/> */}
+							<Actions id={id} setPers={setPers} persons={persons}/>
 						</td>
 					</tr>
 				);

@@ -1,0 +1,8 @@
+@import "./Action/_action.scss";
+
+.actions {
+  display: flex;
+  margin: 0 5px;
+  justify-content: space-between;
+  width: 100%;
+}

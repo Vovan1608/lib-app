@@ -4,7 +4,12 @@ import Header from "../common/Header/Header";
 
 const Add = () => {
 	return (
-		<Header page="Add" />
+		<>
+			<Header page="Add" />
+			<main className="main">
+				
+			</main>
+		</>
 	);
 }
 
