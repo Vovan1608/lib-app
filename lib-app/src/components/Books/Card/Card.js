@@ -2,12 +2,12 @@ import React from "react";
 
 const Card = ({name, author, description, path}) => {
 	return (
-		<div className="card col-xl-4 col-lg-4 mb-3" >
+		<div className="card col-xl-3 col-lg-4 col-md-6 col-sm-12">
 			<div className="row g-0">
-				<div className="col-md-4">
+				<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 					<img src={path} className="img-fluid rounded-start" alt={name} />
 				</div>
-				<div className="col-md-8">
+				<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 					<div className="card-body">
 						<h5 className="card-title">{name}</h5>
 						<p className="card-text">
