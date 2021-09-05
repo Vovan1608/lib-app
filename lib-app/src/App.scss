@@ -1,0 +1,28 @@
+// @import "~bootstrap/scss/bootstrap";
+@import "./styles/_variables.scss";
+@import "./styles/_mixins.scss";
+@import "./components/header/_header.scss";
+@import "./components/Sidebar/_sidebar.scss";
+@import "./components/common/LinkTo/_link-to.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  margin: 0 auto;
+  width: 98vw;
+}
+
+.wrap {
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  grid-template-rows: 10vh 90vh;
+  grid-template-columns: 15% 85%;
+  background-color: $main-bg-color;
+}
