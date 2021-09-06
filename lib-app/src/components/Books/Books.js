@@ -28,7 +28,7 @@ const Books = () => {
 		<>
 			<Header page="Books" />
 			<main className="main">
-				<Search />
+				<Search setSearch={setSearchExp}/>
 				<div className="books_container">
 					{data.map(book => {
 						const {id, picture, name, author, description} = book;

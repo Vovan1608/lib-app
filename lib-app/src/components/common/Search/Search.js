@@ -1,20 +1,20 @@
 import React from "react";
-// import { useState } from "react";
+import { useState } from "react";
 
-const Search = () => {
-	// const [searchString, setSearchString] = useState('');
+const Search = ({setSearch}) => {
+	const [searchString, setSearchString] = useState('');
 
   const onChangeSearch = e => {
-    // const { value } = e.target;
-		// setSearchString(value);
-    // passData(value);
+    const { value } = e.target;
+		setSearchString(value);
+    setSearch(value);
   }
 
 	return (
 		<input
 			className="input"
 			placeholder="search"
-			// value={searchString}
+			value={searchString}
 			onChange={onChangeSearch}/>
 	);
 }

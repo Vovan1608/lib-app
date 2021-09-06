@@ -10,6 +10,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Authors from "./components/Authors/Authors";
 import Books from "./components/Books/Books";
 import Add from "./components/Add/Add";
+import Edit from "./components/Edit/Edit";
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
             <Route path="/authors" component={Authors} />
             <Route path="/books" component={Books} />
             <Route path="/add" component={Add} />
-            {/* <Route path="/edit" component={Edit} /> */}
+            <Route path="/edit" component={Edit} />
           </Switch>
         </div>
 			</div>

@@ -3,15 +3,15 @@ import React from "react";
 import Header from "../common/Header/Header";
 import Form from "../common/Form/Form";
 
-const Add = () => {
+const Edit = () => {
 	return (
 		<>
-			<Header page="Add" />
+			<Header page="Edit" />
 			<main className="main">
-				<Form buttons_type="Submit" />
+				<Form buttons_type="Edit"/>
 			</main>
 		</>
 	);
 }
 
-export default Add;
+export default Edit;
