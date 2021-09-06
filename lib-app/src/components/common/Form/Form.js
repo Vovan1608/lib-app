@@ -23,17 +23,6 @@ const Form = ({buttons_type}) => {
 		e.preventDefault();
 	}
 
-	const [state, dispatch] = useReducer(reducer, initialState);
-	const {info} = state;
-
-	function reducer({info}, action) {
-		if (action.type === 'Submit') {
-			return setInfo(initialInfo);
-		}
-	}
-
-	useEffect(() => {dispatch({type: 'Submit'})}, [dispatch]);
-
 	return (
 		<form onSubmit={handleSubmit}>
 			{['id', 'name', 'surname', 'date_of_birth', 'date_of_death'].map(el => {
