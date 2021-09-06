@@ -1,3 +1,7 @@
 .input_width {
   width: 8rem;
 }
+
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}

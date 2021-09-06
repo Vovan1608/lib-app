@@ -9,25 +9,10 @@ import arrow from "../../../../../pictures/actions-svg/arrow.svg";
 import { deleteAxios, getAxios} from "../../../../../server/api";
 
 const Actions = ({id, setPers, persons}) => {
-	const onClick = e => {
-		if (e.target.id === 'remove') {
-			deleteAxios('authors', id);
-			const filtered = persons.filter(el => el.id !== id);
-			setPers(filtered);
-		}
-
-		if (e.target.id === 'edit') {
-			const fetchData = async () => {
-				const response = await getAxios(`/authors/${id}`);
-				// postAxios('modal', response.data);
-			}
-
-			fetchData();
-		}
-	}
+	
 
 	return (
-		<div className="actions" onClick={onClick} id={id}>
+		<div className="actions"  id={id}>
 			<Link to="/edit">
 				<Action text='pencil' path={pencil} id="edit" />
 			</Link>

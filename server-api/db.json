@@ -1,5 +1,4 @@
 {
-  "modal": [],
   "authors": [
     {
       "createdAt": "2021-08-31",
@@ -24,6 +23,13 @@
       "surname": "Dostoevsky",
       "date_of_birth": "1821-10-30",
       "date_of_death": "1881-01-28"
+    },
+    {
+      "id": 4,
+      "name": "Bob",
+      "surname": "Skin",
+      "date_of_birth": "1950-12-15",
+      "date_of_death": ""
     }
   ],
   "books": [
