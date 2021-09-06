@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import { Link } from "react-router-dom";
-import { useState, useEffect, useReducer } from "react";
 
 import Input from "./Input/Input";
 import { postAxios } from "../../../server/api";
@@ -17,22 +16,23 @@ const Form = ({buttons_type}) => {
 	const [info, setInfo] = useState(initialInfo);
 
 	const handleSubmit = e => {
+		e.preventDefault();
+
 		if (buttons_type === 'Submit') {
 			postAxios('authors', info);
 		}
-		e.preventDefault();
 	}
+
 
 	return (
 		<form onSubmit={handleSubmit}>
-			{['id', 'name', 'surname', 'date_of_birth', 'date_of_death'].map(el => {
+			{Object.keys(initialInfo).map(el => {
 				return (
 					<Input
 						key={el}
 						name={el}
 						setInfo={setInfo}
 						info={info}
-						id={el}
 					/>
 				);
 			})}
@@ -40,6 +40,9 @@ const Form = ({buttons_type}) => {
 				type="submit"
 				className="btn btn-primary"
 				value={buttons_type}
+				data-bs-toggle="popover"
+				title="Popover title"
+				data-bs-content="And here's some amazing content. It's very engaging. Right?"
 			/>
 			<Link to="/authors">
 				<input

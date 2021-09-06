@@ -6,7 +6,7 @@ import Form from "../common/Form/Form";
 const Edit = () => {
 	return (
 		<>
-			<Header page="Edit" />
+			<Header page="Edit author" />
 			<main className="main">
 				<Form buttons_type="Edit"/>
 			</main>

@@ -30,6 +30,69 @@
       "surname": "Skin",
       "date_of_birth": "1950-12-15",
       "date_of_death": ""
+    },
+    {
+      "id": 5,
+      "name": "Tom",
+      "surname": "Noris",
+      "date_of_birth": "1902-01-03",
+      "date_of_death": ""
+    },
+    {
+      "id": 6,
+      "name": "Smith",
+      "surname": "Brown",
+      "date_of_birth": "1888-02-28",
+      "date_of_death": "1952-03-23"
+    },
+    {
+      "id": 7,
+      "name": "Pim",
+      "surname": "Pom",
+      "date_of_birth": "1900-03-25",
+      "date_of_death": "1985-04-23"
+    },
+    {
+      "id": 8,
+      "name": "Tomas",
+      "surname": "Butler",
+      "date_of_birth": "1899-04-12",
+      "date_of_death": "1968-06-14"
+    },
+    {
+      "id": 9,
+      "name": "Nil",
+      "surname": "Red",
+      "date_of_birth": "1654-12-07",
+      "date_of_death": ""
+    },
+    {
+      "id": 10,
+      "name": "Mok",
+      "surname": "Black",
+      "date_of_birth": "1234-12-23",
+      "date_of_death": ""
+    },
+    {
+      "id": 11,
+      "name": "Lop",
+      "surname": "Fok",
+      "date_of_birth": "1345-12-05",
+      "date_of_death": "1396-01-23"
+    },
+    {
+      "id": 12,
+      "name": "Tom",
+      "surname": "Bom",
+      "date_of_birth": "1478-09-23",
+      "date_of_death": "1547-07-14"
+    },
+    {
+      "id": 13,
+      "name": "NM",
+      "surname": "OI",
+      "date_of_birth": "1234-12-23",
+      "date_of_death": ""
     }
   ],
   "books": [

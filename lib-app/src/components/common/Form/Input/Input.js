@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Input = ({name, info, setInfo}) => {
 	const [input, setInput] = useState('');

@@ -24,10 +24,10 @@ const TableRow = ({search}) => {
 	return (
 		<tbody>
 			{data.map(person => {
-				const {createdAt, id, name, surname, date_of_birth, date_of_death} = person;
+				const {id, name, surname, date_of_birth, date_of_death} = person;
 
 				return (
-					<tr key={createdAt + id + name}>
+					<tr key={id + name}>
 						<td>{id}</td>
 						<td>{name}</td>
 						<td>{surname}</td>
