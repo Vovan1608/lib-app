@@ -1,29 +1,29 @@
 import React from "react";
 
+import { SuccessPopUp } from "../../"
 import { postAxios } from "../../../../server/api";
 
 const Modal = ({data, setData}) => {
+	const { isOpen, info, title } = data;
 
 	const handleClose = e => {
 		setData(false);
 	}
 
 	const handleSave = e => {
-		postAxios('authors', data.info).then(res => {
-			
-		});
+		postAxios('authors', info);
 		setData(false);
 	}
 
   return (
 		<>
-			{data.isOpen &&
+			{isOpen &&
 				<div>
 					<div className="modal" style={{display: 'block'}}>
 						<div className="modal-dialog">
 							<div className="modal-content">
 								<div className="modal-header">
-									<h5 className="modal-title">{data.title}</h5>
+									<h5 className="modal-title">{title}</h5>
 								</div>
 								<div className="modal-body">
 									<p>{data.body}</p>
@@ -50,6 +50,7 @@ const Modal = ({data, setData}) => {
 					</div>
 				</div>
 			}
+			<SuccessPopUp dataAuthor={info}/>
 		</>
   );
 }
