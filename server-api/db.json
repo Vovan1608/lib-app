@@ -93,6 +93,34 @@
       "surname": "OI",
       "date_of_birth": "1234-12-23",
       "date_of_death": ""
+    },
+    {
+      "id": 14,
+      "name": "ghj",
+      "surname": "kjg",
+      "date_of_birth": "jbg",
+      "date_of_death": ""
+    },
+    {
+      "id": 15,
+      "name": "Tooo",
+      "surname": "Hgtf",
+      "date_of_birth": "1234",
+      "date_of_death": ""
+    },
+    {
+      "id": 16,
+      "name": "Vova",
+      "surname": "Zenin",
+      "date_of_birth": "1981",
+      "date_of_death": ""
+    },
+    {
+      "id": 17,
+      "name": "Mon",
+      "surname": "DeTour",
+      "date_of_birth": "1985-12-05",
+      "date_of_death": "2020-01-23"
     }
   ],
   "books": [

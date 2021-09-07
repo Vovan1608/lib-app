@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Input from "./Input/Input";
-import { postAxios } from "../../../server/api";
 
-const Form = ({buttons_type}) => {
+const Form = ({buttons_type, setData, data}) => {
 	const initialInfo = {
 		id: '',
 		name: '',
@@ -17,12 +16,12 @@ const Form = ({buttons_type}) => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-
-		if (buttons_type === 'Submit') {
-			postAxios('authors', info);
-		}
+		data['isOpen'] = true;
+		data['title'] = 'You are going to add author:';
+		data['body'] = `${info.name} ${info.surname}`;
+		data['info'] = info;
+		setData({...data});
 	}
-
 
 	return (
 		<form onSubmit={handleSubmit}>

@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Modal from "./Modal";
+import Modal from "./Modal/Modal";
 
-function ModalRenderer() {
+const ModalRenderer = ({data, setData}) => {
   return (
 		ReactDOM.createPortal(
-			<Modal />,
+			<Modal
+				data={data}
+				setData={setData}
+			/>,
 			document.body
 		)
   );
