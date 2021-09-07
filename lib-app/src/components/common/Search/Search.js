@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Search = ({setSearch}) => {
 	const [searchString, setSearchString] = useState('');
@@ -19,4 +18,4 @@ const Search = ({setSearch}) => {
 	);
 }
 
-export default Search;
+export {Search};

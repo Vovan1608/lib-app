@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 
-import Header from "../common/Header/Header";
-import Form from "../common/Form/Form";
-import ModalRenderer from "../common/ModalRender/ModalRender";
+import {Header, Form, ModalRenderer} from "../common";
 
 const Add = () => {
 	const initialData = {
@@ -32,4 +30,4 @@ const Add = () => {
 	);
 }
 
-export default Add;
+export {Add};

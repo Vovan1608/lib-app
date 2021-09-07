@@ -27,4 +27,4 @@ const Input = ({name, info, setInfo}) => {
 	);
 }
 
-export default Input;
+export {Input};

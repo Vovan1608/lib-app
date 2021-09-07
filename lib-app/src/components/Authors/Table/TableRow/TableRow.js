@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import Actions from "./Actions/Actions";
+import {Actions} from "./Actions";
 import { fetchData } from "../../../../server/api";
-import { useState, useEffect } from 'react';
 
 const TableRow = ({search}) => {
 	const [persons, setPers] = useState([]);
@@ -43,4 +42,4 @@ const TableRow = ({search}) => {
 	);
 }
 
-export default TableRow;
+export {TableRow};

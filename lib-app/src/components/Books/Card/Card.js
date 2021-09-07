@@ -23,4 +23,4 @@ const Card = ({name, author, description, path}) => {
 	);
 }
 
-export default Card;
+export {Card};

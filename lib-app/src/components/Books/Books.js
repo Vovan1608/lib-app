@@ -3,9 +3,8 @@ import { useState, useEffect } from 'react';
 
 import { fetchData } from "../../server/api";
 
-import Header from "../common/Header/Header";
-import Search from "../common/Search/Search";
-import Card from "./Card/Card";
+import {Header, Search} from "../common";
+import {Card} from "./Card";
 
 const Books = () => {
 	const [books, setBooks] = useState([]);
@@ -48,4 +47,4 @@ const Books = () => {
 	);
 }
 
-export default Books;
+export {Books};

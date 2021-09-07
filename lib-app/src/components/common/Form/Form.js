@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Input from "./Input/Input";
+import { Input } from "./Input";
 
 const Form = ({buttons_type, setData, data}) => {
 	const initialInfo = {
@@ -16,12 +16,14 @@ const Form = ({buttons_type, setData, data}) => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
+
 		data['isOpen'] = true;
 		data['title'] = 'You are going to add author:';
 		data['body'] = `${info.name} ${info.surname}`;
 		data['info'] = info;
 		setData({...data});
 	}
+
 
 	return (
 		<form onSubmit={handleSubmit}>
@@ -41,7 +43,6 @@ const Form = ({buttons_type, setData, data}) => {
 				value={buttons_type}
 				data-bs-toggle="popover"
 				title="Popover title"
-				data-bs-content="And here's some amazing content. It's very engaging. Right?"
 			/>
 			<Link to="/authors">
 				<input
@@ -54,4 +55,4 @@ const Form = ({buttons_type, setData, data}) => {
 	);
 }
 
-export default Form;
+export {Form};

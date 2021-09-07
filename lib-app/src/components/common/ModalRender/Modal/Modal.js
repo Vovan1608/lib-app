@@ -54,4 +54,4 @@ const Modal = ({data, setData}) => {
   );
 }
 
-export default Modal;
+export {Modal};

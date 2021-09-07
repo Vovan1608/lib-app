@@ -1,10 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
-import Header from "../common/Header/Header";
-import Search from "../common/Search/Search";
-import LinkTo from "../common/LinkTo/LinkTo";
-import Table from "./Table/Table";
+import {Header, Search, LinkTo} from "../common";
+import {Table} from "./Table";
 
 const Authors = () => {
 	const [searchExp, setSearchExp] = useState('');
@@ -21,4 +18,4 @@ const Authors = () => {
 	);
 }
 
-export default Authors;
+export {Authors};

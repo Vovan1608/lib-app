@@ -8,4 +8,4 @@ const Header = ({page}) => {
 	)
 }
 
-export default Header;
+export {Header};

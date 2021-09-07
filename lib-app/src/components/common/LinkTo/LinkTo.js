@@ -11,4 +11,4 @@ const LinkTo = ({name}) => {
 	);
 }
 
-export default LinkTo;
+export {LinkTo};

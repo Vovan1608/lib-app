@@ -10,4 +10,4 @@ const Action = ({path, text, id}) => {
 	);
 }
 
-export default Action;
+export {Action};

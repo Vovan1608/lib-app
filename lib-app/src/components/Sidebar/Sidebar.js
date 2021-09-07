@@ -1,7 +1,7 @@
 import React from "react";
 
-import Logo from "./Logo/Logo";
-import LinkTo from "../common/LinkTo/LinkTo";
+import {Logo} from "./Logo";
+import {LinkTo} from "../common";
 
 const Sidebar = () => {
 	return (
@@ -13,4 +13,4 @@ const Sidebar = () => {
 	)
 }
 
-export default Sidebar;
+export {Sidebar};

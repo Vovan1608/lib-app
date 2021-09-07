@@ -10,4 +10,4 @@ const TableHeaders = ({headers}) => {
 	);
 }
 
-export default TableHeaders;
+export {TableHeaders};

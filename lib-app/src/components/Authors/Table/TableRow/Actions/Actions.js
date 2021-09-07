@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Action from "./Action/Action";
+import {Action} from "./Action";
 import basket from "../../../../../pictures/actions-svg/basket.svg";
 import pencil from "../../../../../pictures/actions-svg/pencil.svg";
 import arrow from "../../../../../pictures/actions-svg/arrow.svg";
@@ -24,4 +24,4 @@ const Actions = ({id, setPers, persons}) => {
 	);
 }
 
-export default Actions;
+export {Actions};

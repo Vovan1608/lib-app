@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Modal from "./Modal/Modal";
+import {Modal} from "./Modal";
 
 const ModalRenderer = ({data, setData}) => {
   return (
@@ -15,4 +15,4 @@ const ModalRenderer = ({data, setData}) => {
   );
 }
 
-export default ModalRenderer;
+export {ModalRenderer};

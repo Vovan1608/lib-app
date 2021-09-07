@@ -1,7 +1,6 @@
 import React from "react";
 
-import Header from "../common/Header/Header";
-import Form from "../common/Form/Form";
+import {Header, Form} from "../common";
 
 const Edit = () => {
 	return (
@@ -14,4 +13,4 @@ const Edit = () => {
 	);
 }
 
-export default Edit;
+export {Edit};

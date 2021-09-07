@@ -1,7 +1,7 @@
 import React from "react";
 
-import TableHeaders from "./TableHeaders/TableHeaders";
-import TableRow from "./TableRow/TableRow";
+import {TableHeaders} from "./TableHeaders";
+import {TableRow} from "./TableRow";
 
 const Table = ({searchStr}) => {
 	const headers = ['Date', 'First Name', 'Last Name', 'Date of birth', 'Date of death', 'Actions'];
@@ -14,4 +14,4 @@ const Table = ({searchStr}) => {
 	);
 }
 
-export default Table;
+export {Table};
