@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 
-import {Header, Search, LinkTo} from "../common";
+import {Header, Search, LinkTo, ModalRenderer, SuccessPopUp} from "../common";
 import {Table} from "./Table";
 
 const Authors = ({setAuthorInfo}) => {
+	const initialData = {
+		isOpen: false,
+		isPopUp: false,
+		title: '',
+		body: '',
+		info: {},
+		isDelete: null
+	}
 
 	const [searchExp, setSearchExp] = useState('');
-
+	const [data, setData] = useState(initialData);
+	console.log(data.isDelete);
 	return (
 		<>
 			<Header page="Authors" />
@@ -16,6 +25,7 @@ const Authors = ({setAuthorInfo}) => {
 				<Table
 					searchStr={searchExp}
 					setAuthorInfo={setAuthorInfo}
+					setData={setData}
 				/>
 			</main>
 		</>

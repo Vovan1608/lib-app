@@ -22,6 +22,7 @@ const Form = ({buttons_type, setData, data, authorId}) => {
 
 		if (buttons_type === 'Submit') {
 			data.title = 'You are going to add author:';
+			data.isSubmit = true;
 		}
 
 		if (buttons_type === 'Edit') {

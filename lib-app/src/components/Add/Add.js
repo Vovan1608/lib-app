@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 
 import {Header, Form, ModalRenderer, SuccessPopUp} from "../common";
 
@@ -8,7 +8,8 @@ const Add = () => {
 		isPopUp: false,
 		title: '',
 		body: '',
-		info: {}
+		info: {},
+		isSubmit: null
 	}
 
 	const [data, setData] = useState(initialData);

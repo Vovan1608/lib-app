@@ -6,9 +6,8 @@ import basket from "../../../../../pictures/actions-svg/basket.svg";
 import pencil from "../../../../../pictures/actions-svg/pencil.svg";
 import arrow from "../../../../../pictures/actions-svg/arrow.svg";
 
-import { deleteAxios, getAxios} from "../../../../../server/api";
+const Actions = ({id, setAuthorInfo, setIsDelete, setData}) => {
 
-const Actions = ({id, setPers, persons, setAuthorInfo}) => {
 	const handleClick = e => {
 		setAuthorInfo(id);
 	}
@@ -22,7 +21,7 @@ const Actions = ({id, setPers, persons, setAuthorInfo}) => {
 					id="edit"
 				/>
 			</Link>
-			<Action text='basket' path={basket} id="remove"/>
+			<Action text='basket' path={basket} id="remove" setData={setData}/>
 			<Link to="/books">
 				<Action text='arrow' path={arrow} id="to_books"/>
 			</Link>

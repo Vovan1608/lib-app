@@ -1,9 +1,9 @@
 import React from "react";
 
-import { postAxios, putAxios } from "../../../../server/api";
+import { postAxios, putAxios, deleteAxios } from "../../../../server/api";
 
 const Modal = ({data, setData}) => {
-	const { isOpen, info, title, body, isEdit } = data;
+	const { isOpen, info, title, body, isEdit, isSubmit, isDelete } = data;
 
 	const handleClose = e => {
 		data.isOpen = false;
@@ -13,9 +13,17 @@ const Modal = ({data, setData}) => {
 	const handleSave = e => {
 		if (isEdit) {
 			putAxios('authors', info.id, info);
-		} else {
-			postAxios('authors', info);
 		}
+
+		if (isSubmit) {
+			postAxios('authors', info);
+			console.log("isSub");
+		}
+
+		if (isDelete) {
+			console.log('yes');
+		}
+
 		data.isOpen = false;
 		data.isPopUp = true;
 		setData({...data});

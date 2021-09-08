@@ -3,11 +3,13 @@ import React, { useState, useEffect } from "react";
 import {Actions} from "./Actions";
 import { fetchData } from "../../../../server/api";
 
-const TableRow = ({search, setAuthorInfo}) => {
+const TableRow = ({search, setAuthorInfo, setData}) => {
 	const [persons, setPers] = useState([]);
 	const [filtered, setFiltered] = useState([]);
 
-	useEffect(() => fetchData('/authors', setPers), [setPers]);
+	useEffect(() => {
+		fetchData('/authors', setPers);
+	}, [setPers]);
 
 	useEffect(() => {
 		const searchRegExp = new RegExp(`${search}`, 'i');
@@ -38,6 +40,7 @@ const TableRow = ({search, setAuthorInfo}) => {
 								setPers={setPers}
 								persons={persons}
 								setAuthorInfo={setAuthorInfo}
+								setData={setData}
 							/>
 						</td>
 					</tr>
