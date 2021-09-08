@@ -65,6 +65,20 @@
       "surname": "Red",
       "date_of_birth": "1654-12-07",
       "date_of_death": ""
+    },
+    {
+      "id": 10,
+      "name": "Ret",
+      "surname": "Wer",
+      "date_of_birth": "894",
+      "date_of_death": ""
+    },
+    {
+      "id": 11,
+      "name": "Grog",
+      "surname": "Mok",
+      "date_of_birth": "546",
+      "date_of_death": "602"
     }
   ],
   "books": [

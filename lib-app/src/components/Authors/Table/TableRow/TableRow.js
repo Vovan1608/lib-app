@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import {Actions} from "./Actions";
 import { fetchData } from "../../../../server/api";
 
-const TableRow = ({search}) => {
+const TableRow = ({search, setAuthorInfo}) => {
 	const [persons, setPers] = useState([]);
 	const [filtered, setFiltered] = useState([]);
 
@@ -33,7 +33,12 @@ const TableRow = ({search}) => {
 						<td>{date_of_birth}</td>
 						<td>{date_of_death}</td>
 						<td>
-							<Actions id={id} setPers={setPers} persons={persons}/>
+							<Actions
+								id={id}
+								setPers={setPers}
+								persons={persons}
+								setAuthorInfo={setAuthorInfo}
+							/>
 						</td>
 					</tr>
 				);

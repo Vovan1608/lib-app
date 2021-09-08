@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Input = ({name, info, setInfo}) => {
+const Input = ({name, info, setInfo, value}) => {
 	const [input, setInput] = useState('');
 
 	const handleInput = e => {
@@ -20,7 +20,7 @@ const Input = ({name, info, setInfo}) => {
 				placeholder={name.replaceAll('_', ' ')}
 				aria-label={name}
 				aria-describedby={name}
-				value={input}
+				value={value || input}
 				required={name === 'name' || name === 'surname' || name ==='date_of_birth'}
 			/>
 		</div>

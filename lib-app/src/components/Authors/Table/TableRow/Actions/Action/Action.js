@@ -1,6 +1,6 @@
 import React from "react";
 
-const Action = ({path, text, id}) => {
+const Action = ({path, text, id, setAuthorInfo}) => {
 	return (
 		<>
 			<span className="action">

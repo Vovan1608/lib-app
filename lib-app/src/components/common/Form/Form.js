@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { fetchData } from "../../../server/api";
 
 import { Input } from "./Input";
 
-const Form = ({buttons_type, setData, data}) => {
+const Form = ({buttons_type, setData, data, authorId}) => {
 	const initialInfo = {
 		id: '',
 		name: '',
@@ -14,11 +15,21 @@ const Form = ({buttons_type, setData, data}) => {
 
 	const [info, setInfo] = useState(initialInfo);
 
+	useEffect(() => authorId && fetchData(`/authors/${authorId}`, setInfo), [setInfo, authorId]);
+
 	const handleSubmit = e => {
 		e.preventDefault();
 
+		if (buttons_type === 'Submit') {
+			data.title = 'You are going to add author:';
+		}
+
+		if (buttons_type === 'Edit') {
+			data.title = 'You are going to edit author:';
+			data.isEdit = true;
+		}
+
 		data.isOpen = true;
-		data.title = 'You are going to add author:';
 		data.body = `${info.name} ${info.surname}`;
 		data.info = info;
 		setData({...data});
@@ -41,6 +52,7 @@ const Form = ({buttons_type, setData, data}) => {
 						name={el}
 						setInfo={setInfo}
 						info={info}
+						value={'' || info[el]}
 					/>
 				);
 			})}

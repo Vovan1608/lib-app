@@ -1,14 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 
-import {Header, Form} from "../common";
+import {Header, Form, ModalRenderer, SuccessPopUp} from "../common";
 
-const Edit = () => {
+const Edit = ({authorInfo}) => {
+	const initialData = {
+		isOpen: false,
+		isPopUp: false,
+		title: '',
+		body: '',
+		info: {},
+		isEdit: null
+	}
+
+	const [data, setData] = useState(initialData);
+
 	return (
 		<>
 			<Header page="Edit author" />
 			<main className="main">
-				<Form buttons_type="Edit"/>
+				<Form
+					buttons_type="Edit"
+					setData={setData}
+					data={data}
+					authorId={authorInfo}
+				/>
 			</main>
+			<ModalRenderer
+				setData={setData}
+				data={data}
+			/>
+			<SuccessPopUp data={data}/>
 		</>
 	);
 }

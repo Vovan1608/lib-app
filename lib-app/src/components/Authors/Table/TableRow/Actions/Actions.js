@@ -8,13 +8,19 @@ import arrow from "../../../../../pictures/actions-svg/arrow.svg";
 
 import { deleteAxios, getAxios} from "../../../../../server/api";
 
-const Actions = ({id, setPers, persons}) => {
-	
+const Actions = ({id, setPers, persons, setAuthorInfo}) => {
+	const handleClick = e => {
+		setAuthorInfo(id);
+	}
 
 	return (
-		<div className="actions"  id={id}>
+		<div className="actions" id={id} onClick={handleClick}>
 			<Link to="/edit">
-				<Action text='pencil' path={pencil} id="edit" />
+				<Action
+					text='pencil'
+					path={pencil}
+					id="edit"
+				/>
 			</Link>
 			<Action text='basket' path={basket} id="remove"/>
 			<Link to="/books">

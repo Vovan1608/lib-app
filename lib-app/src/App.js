@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,6 +9,8 @@ import './App.scss';
 import { Sidebar, Authors, Add, Books, Edit } from "./components";
 
 const App = () => {
+  const [authorInfo, setAuthorInfo] = useState(0);
+
   return (
     <Router>
 			<div className="center">
@@ -16,10 +18,16 @@ const App = () => {
           <Sidebar />
           <Switch>
             <Route exact path="/" component={Authors} />
-            <Route path="/authors" component={Authors} />
+            <Route
+              path="/authors"
+              render={props => <Authors setAuthorInfo={setAuthorInfo} {...props}/>}
+            />
             <Route path="/books" component={Books} />
             <Route path="/add" component={Add} />
-            <Route path="/edit" component={Edit} />
+            <Route
+              path="/edit"
+              render={props => <Edit authorInfo={authorInfo} {...props} />}
+            />
           </Switch>
         </div>
 			</div>
