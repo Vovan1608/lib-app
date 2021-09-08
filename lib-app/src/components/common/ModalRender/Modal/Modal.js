@@ -1,18 +1,31 @@
 import React from "react";
 
-import { SuccessPopUp } from "../../"
 import { postAxios } from "../../../../server/api";
 
 const Modal = ({data, setData}) => {
-	const { isOpen, info, title } = data;
+	const { isOpen, info, title, body } = data;
 
 	const handleClose = e => {
-		setData(false);
+		data.isOpen = false;
+		setData({...data});
 	}
 
 	const handleSave = e => {
 		postAxios('authors', info);
-		setData(false);
+		data.isOpen = false;
+		data.isPopUp = true;
+		setData({...data});
+
+		const delay = 3000;
+
+		setTimeout(() => {
+			data.isPopUp = false;
+			setData({...data});
+		}, delay);
+
+		setTimeout(() => {
+			// setData();
+		})
 	}
 
   return (
@@ -26,7 +39,7 @@ const Modal = ({data, setData}) => {
 									<h5 className="modal-title">{title}</h5>
 								</div>
 								<div className="modal-body">
-									<p>{data.body}</p>
+									<p>{body}</p>
 								</div>
 								<div className="modal-footer">
 									<button
@@ -50,7 +63,6 @@ const Modal = ({data, setData}) => {
 					</div>
 				</div>
 			}
-			<SuccessPopUp dataAuthor={info}/>
 		</>
   );
 }

@@ -65,69 +65,6 @@
       "surname": "Red",
       "date_of_birth": "1654-12-07",
       "date_of_death": ""
-    },
-    {
-      "id": 10,
-      "name": "Mok",
-      "surname": "Black",
-      "date_of_birth": "1234-12-23",
-      "date_of_death": ""
-    },
-    {
-      "id": 11,
-      "name": "Lop",
-      "surname": "Fok",
-      "date_of_birth": "1345-12-05",
-      "date_of_death": "1396-01-23"
-    },
-    {
-      "id": 12,
-      "name": "Tom",
-      "surname": "Bom",
-      "date_of_birth": "1478-09-23",
-      "date_of_death": "1547-07-14"
-    },
-    {
-      "id": 13,
-      "name": "NM",
-      "surname": "OI",
-      "date_of_birth": "1234-12-23",
-      "date_of_death": ""
-    },
-    {
-      "id": 14,
-      "name": "ghj",
-      "surname": "kjg",
-      "date_of_birth": "jbg",
-      "date_of_death": ""
-    },
-    {
-      "id": 15,
-      "name": "Tooo",
-      "surname": "Hgtf",
-      "date_of_birth": "1234",
-      "date_of_death": ""
-    },
-    {
-      "id": 16,
-      "name": "Vova",
-      "surname": "Zenin",
-      "date_of_birth": "1981",
-      "date_of_death": ""
-    },
-    {
-      "id": 17,
-      "name": "Mon",
-      "surname": "DeTour",
-      "date_of_birth": "1985-12-05",
-      "date_of_death": "2020-01-23"
-    },
-    {
-      "id": 18,
-      "name": "dfh",
-      "surname": "ghkm",
-      "date_of_birth": ".l/",
-      "date_of_death": ""
     }
   ],
   "books": [

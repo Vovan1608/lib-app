@@ -8,6 +8,7 @@
 @import "./components/common/Search/_search.scss";
 @import "./components/Books/_books.scss";
 @import "./components/common/Form/_form.scss";
+@import "./components/common/SuccessPopUp/_success-pop-up.scss";
 
 * {
   padding: 0;
@@ -39,4 +40,8 @@
   padding: 0.5rem;
   background-color: #c4c4c4;
   height: 98.5%;
+}
+
+.hide {
+  display: none;
 }

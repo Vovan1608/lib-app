@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useState } from "react";
 
-import {Header, Form, ModalRenderer} from "../common";
+import {Header, Form, ModalRenderer, SuccessPopUp} from "../common";
 
 const Add = () => {
 	const initialData = {
 		isOpen: false,
+		isPopUp: false,
 		title: '',
 		body: '',
 		info: {}
@@ -26,6 +27,7 @@ const Add = () => {
 				setData={setData}
 				data={data}
 			/>
+			<SuccessPopUp data={data}/>
 		</>
 	);
 }

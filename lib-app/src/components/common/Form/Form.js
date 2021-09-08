@@ -17,17 +17,24 @@ const Form = ({buttons_type, setData, data}) => {
 	const handleSubmit = e => {
 		e.preventDefault();
 
-		data['isOpen'] = true;
-		data['title'] = 'You are going to add author:';
-		data['body'] = `${info.name} ${info.surname}`;
-		data['info'] = info;
+		data.isOpen = true;
+		data.title = 'You are going to add author:';
+		data.body = `${info.name} ${info.surname}`;
+		data.info = info;
 		setData({...data});
 	}
 
+	const inputs = Object.keys(initialInfo).filter(el => {
+		if (buttons_type === 'Submit') {
+			return el !== 'id';
+		}
+
+		return el;
+	});
 
 	return (
 		<form onSubmit={handleSubmit}>
-			{Object.keys(initialInfo).map(el => {
+			{inputs.map(el => {
 				return (
 					<Input
 						key={el}
