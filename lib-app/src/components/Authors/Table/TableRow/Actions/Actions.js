@@ -6,10 +6,13 @@ import basket from "../../../../../pictures/actions-svg/basket.svg";
 import pencil from "../../../../../pictures/actions-svg/pencil.svg";
 import arrow from "../../../../../pictures/actions-svg/arrow.svg";
 
-const Actions = ({id, setAuthorInfo, setIsDelete, setData}) => {
+const Actions = ({ id, setAuthorInfo, setData, data }) => {
 
 	const handleClick = e => {
 		setAuthorInfo(id);
+
+		data.id = id;
+		setData({...data});
 	}
 
 	return (
@@ -21,7 +24,13 @@ const Actions = ({id, setAuthorInfo, setIsDelete, setData}) => {
 					id="edit"
 				/>
 			</Link>
-			<Action text='basket' path={basket} id="remove" setData={setData}/>
+			<Action
+				text='basket'
+				path={basket}
+				id="remove"
+				setData={setData}
+				data={data}
+			/>
 			<Link to="/books">
 				<Action text='arrow' path={arrow} id="to_books"/>
 			</Link>

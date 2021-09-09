@@ -17,7 +17,6 @@ const Modal = ({data, setData}) => {
 
 		if (isSubmit) {
 			postAxios('authors', info);
-			console.log("isSub");
 		}
 
 		if (isDelete) {

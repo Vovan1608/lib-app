@@ -75,10 +75,24 @@
     },
     {
       "id": 11,
-      "name": "BBBBB",
+      "name": "Arbb",
       "surname": "l;kpo",
-      "date_of_birth": "32156",
-      "date_of_death": ""
+      "date_of_birth": "123",
+      "date_of_death": "165"
+    },
+    {
+      "id": 12,
+      "name": "Bob",
+      "surname": "Marley",
+      "date_of_birth": "1950",
+      "date_of_death": "1986"
+    },
+    {
+      "id": 13,
+      "name": "Anton",
+      "surname": "Chex",
+      "date_of_birth": "1235",
+      "date_of_death": "1256"
     }
   ],
   "books": [

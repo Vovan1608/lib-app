@@ -1,9 +1,12 @@
 import React from "react";
 
-const Action = ({path, text, id, setData}) => {
+const Action = ({path, text, id, setData, data}) => {
 	const handleDelete = e => {
 		if (e.target.id === 'remove') {
-			setData(true);
+			data.isOpen = true;
+			data.isDelete = true;
+			data.title = 'You are going to delete author:';
+			setData({...data});
 		}
 	}
 

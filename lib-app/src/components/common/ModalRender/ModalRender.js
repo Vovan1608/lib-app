@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import {Modal} from "./Modal";
 
-const ModalRenderer = ({data, setData, initial}) => {
+const ModalRenderer = ({data, setData}) => {
   return (
 		ReactDOM.createPortal(
 			<Modal
