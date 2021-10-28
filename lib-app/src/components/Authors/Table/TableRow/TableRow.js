@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import {Actions} from "./Actions";
 import { fetchData } from "../../../../server/api";
+import { get } from "../../../../api/rest/get";
 
 const TableRow = ({search, setAuthorInfo, setData, data }) => {
 	const [persons, setPers] = useState([]);
 	const [filtered, setFiltered] = useState([]);
 
 	useEffect(() => {
+		get('/authors').then(res => console.log(res.data));
 		fetchData('/authors', setPers);
 	}, [setPers]);
 
