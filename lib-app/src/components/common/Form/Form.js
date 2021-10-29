@@ -4,7 +4,7 @@ import { fetchData } from "../../../server/api";
 
 import { Input } from "./Input";
 
-const Form = ({buttons_type, setData, data, authorId}) => {
+const Form = ({ buttons_type, setData, data, authorId }) => {
 	const initialInfo = {
 		id: '',
 		name: '',
@@ -75,4 +75,4 @@ const Form = ({buttons_type, setData, data, authorId}) => {
 	);
 }
 
-export {Form};
+export { Form };

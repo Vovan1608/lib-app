@@ -1,22 +1,22 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 
-import { fetchData } from "../../server/api";
+import { get } from "../../api/rest/get";
 
-import {Header, Search} from "../common";
-import {Card} from "./Card";
+import { Header, Search } from "../common";
+import { Card } from "./Card";
 
 const Books = () => {
 	const [books, setBooks] = useState([]);
 	const [searchExp, setSearchExp] = useState('');
 	const [filtered, setFiltered] = useState([]);
 
-	useEffect(() => fetchData('/books', setBooks), [setBooks]);
+	useEffect(() => get('/books').then(res => setBooks(res.data)), [setBooks]);
 
 	useEffect(() => {
 		const searchRegExp = new RegExp(`${searchExp}`, 'i');
 		const filter = books
-			.filter(({author}) => searchRegExp.test(author));
+			.filter(({ author }) => searchRegExp.test(author));
 
 		setFiltered(filter);
 	}, [searchExp, books]);
@@ -47,4 +47,4 @@ const Books = () => {
 	);
 }
 
-export {Books};
+export { Books };

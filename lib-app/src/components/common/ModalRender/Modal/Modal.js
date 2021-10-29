@@ -1,22 +1,23 @@
 import React from "react";
 
 import { postAxios, putAxios, deleteAxios } from "../../../../server/api";
+import { post } from "../../../../api/rest/post";
+import { put } from "../../../../api/rest/put";
 
-const Modal = ({data, setData}) => {
+const Modal = ({ data, setData }) => {
 	const { isOpen, info, title, body, isEdit, isSubmit, isDelete } = data;
 
 	const handleClose = e => {
-		data.isOpen = false;
-		setData({...data});
+		setData({ ...data, isOpen: false });
 	}
 
 	const handleSave = e => {
 		if (isEdit) {
-			putAxios('authors', info.id, info);
+			put('/authors', info.id, info);
 		}
 
 		if (isSubmit) {
-			postAxios('authors', info);
+			post('/authors', info);
 		}
 
 		if (isDelete) {
@@ -25,13 +26,13 @@ const Modal = ({data, setData}) => {
 
 		data.isOpen = false;
 		data.isPopUp = true;
-		setData({...data});
+		setData({ ...data });
 
-		const delay = 3000;
+		const delay = 1500;
 
 		setTimeout(() => {
 			data.isPopUp = false;
-			setData({...data});
+			setData({ ...data });
 		}, delay);
 	}
 
@@ -74,4 +75,4 @@ const Modal = ({data, setData}) => {
   );
 }
 
-export {Modal};
+export { Modal };

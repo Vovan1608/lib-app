@@ -1,3 +1,3 @@
 import { LinkTo } from "./LinkTo";
 
-export {LinkTo}
+export { LinkTo };

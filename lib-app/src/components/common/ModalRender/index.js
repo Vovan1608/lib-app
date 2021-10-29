@@ -1,3 +1,3 @@
 import { ModalRenderer } from "./ModalRender";
 
-export {ModalRenderer}
+export { ModalRenderer };

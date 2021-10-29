@@ -1,3 +1,3 @@
 import { Authors } from "./Authors";
 
-export {Authors}
+export { Authors };

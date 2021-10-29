@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import {Header, Form, ModalRenderer, SuccessPopUp} from "../common";
 
-const Edit = ({authorInfo}) => {
+const Edit = ({ authorInfo }) => {
 	const initialData = {
 		isOpen: false,
 		isPopUp: false,
@@ -34,4 +34,4 @@ const Edit = ({authorInfo}) => {
 	);
 }
 
-export {Edit};
+export { Edit };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import {Header, Form, ModalRenderer, SuccessPopUp} from "../common";
+import { Header, Form, ModalRenderer, SuccessPopUp } from "../common";
 
 const Add = () => {
 	const initialData = {
@@ -33,4 +33,4 @@ const Add = () => {
 	);
 }
 
-export {Add};
+export { Add };

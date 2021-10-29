@@ -93,6 +93,27 @@
       "surname": "Chex",
       "date_of_birth": "1235",
       "date_of_death": "1256"
+    },
+    {
+      "id": 14,
+      "name": "Vin",
+      "surname": "Disel",
+      "date_of_birth": "1652-12-25",
+      "date_of_death": "1699-10-12"
+    },
+    {
+      "id": 15,
+      "name": "Nom",
+      "surname": "Bom",
+      "date_of_birth": "1234-05-06",
+      "date_of_death": "1277-07-08"
+    },
+    {
+      "id": 16,
+      "name": "Moj",
+      "surname": "Fog",
+      "date_of_birth": "1345-02-15",
+      "date_of_death": "1399-03-16"
     }
   ],
   "books": [

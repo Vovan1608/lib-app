@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../../server/api";
 
-import {Header, Search, LinkTo, ModalRenderer, SuccessPopUp} from "../common";
-import {Table} from "./Table";
+import { Header, Search, LinkTo, ModalRenderer, SuccessPopUp } from "../common";
+import { Table } from "./Table";
 
-const Authors = ({setAuthorInfo}) => {
+const Authors = ({ setAuthorInfo }) => {
 	const initialData = {
 		isOpen: false,
 		isPopUp: false,
@@ -51,4 +51,4 @@ const Authors = ({setAuthorInfo}) => {
 	);
 }
 
-export {Authors};
+export { Authors };

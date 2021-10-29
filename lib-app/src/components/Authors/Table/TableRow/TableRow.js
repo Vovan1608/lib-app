@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from "react";
 
-import {Actions} from "./Actions";
-import { fetchData } from "../../../../server/api";
+import { Actions } from "./Actions";
 import { get } from "../../../../api/rest/get";
 
-const TableRow = ({search, setAuthorInfo, setData, data }) => {
+const TableRow = ({ search, setAuthorInfo, setData, data }) => {
 	const [persons, setPers] = useState([]);
 	const [filtered, setFiltered] = useState([]);
 
 	useEffect(() => {
-		get('/authors').then(res => console.log(res.data));
-		fetchData('/authors', setPers);
+		get('/authors').then(res => setPers(res.data));
 	}, [setPers]);
 
 	useEffect(() => {
 		const searchRegExp = new RegExp(`${search}`, 'i');
 		const filter = persons
-			.filter(({name, surname}) => [name, surname].some(el => searchRegExp.test(el)));
+			.filter(({ name, surname }) => [name, surname].some(el => searchRegExp.test(el)));
 
 		setFiltered(filter);
 
@@ -27,7 +25,7 @@ const TableRow = ({search, setAuthorInfo, setData, data }) => {
 	return (
 		<tbody>
 			{dataPersons.map(person => {
-				const {id, name, surname, date_of_birth, date_of_death} = person;
+				const { id, name, surname, date_of_birth, date_of_death } = person;
 
 				return (
 					<tr key={id + name}>
@@ -53,4 +51,4 @@ const TableRow = ({search, setAuthorInfo, setData, data }) => {
 	);
 }
 
-export {TableRow};
+export { TableRow };
